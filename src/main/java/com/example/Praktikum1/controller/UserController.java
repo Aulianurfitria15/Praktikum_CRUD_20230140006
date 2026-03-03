@@ -19,9 +19,6 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @Autowired
-    private ValidationUtil validationUtil;
-
     @PostMapping(
             path = "/api/users",
             consumes = MediaType.APPLICATION_JSON_VALUE,
