@@ -3,6 +3,7 @@ package com.example.Praktikum1.controller;
 import com.example.Praktikum1.model.dto.UserAddRequest;
 import com.example.Praktikum1.model.dto.UserDto;
 import com.example.Praktikum1.service.UserService;
+import com.example.Praktikum1.util.ValidationUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -17,6 +18,9 @@ public class UserController {
 
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private ValidationUtil validationUtil;
 
     @PostMapping(
             path = "/api/users",
